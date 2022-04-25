@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:alg ="http://www.algonquincollege.com/cst8259/labs"
+		   targetNamespace="http://www.algonquincollege.com/cst8259/labs"
+		   attributeFormDefault="unqualified"
+		   elementFormDefault="qualified" >
+
+
+	<xsd:element name="Restaurants">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="3" ref="alg:Restaurant">
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Restaurant">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Id" type="xsd:integer" />
+				<xsd:element name="Name" type="xsd:string" />
+				<xsd:element name="Type" type="xsd:string" />
+				<xsd:element name="Website" type="xsd:string" />
+				<xsd:element ref="alg:Logo"/>
+				<xsd:element ref="alg:Address"/>
+				<xsd:element ref="alg:Phone"/>
+				<xsd:element ref="alg:Menu"/>
+				<xsd:element ref="alg:Reviews"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Logo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Width">
+					<xsd:complexType>
+						<xsd:simpleContent>
+							<xsd:extension base="xsd:unsignedByte">
+								<xsd:attribute name="unit" type="xsd:string" use="required" />
+							</xsd:extension>
+						</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Height">
+					<xsd:complexType>
+						<xsd:simpleContent>
+							<xsd:extension base="xsd:unsignedShort">
+								<xsd:attribute name="unit" type="xsd:string" use="required" />
+							</xsd:extension>
+						</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Source" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Address">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Building_Number" type="xsd:unsignedShort" />
+				<xsd:element name="Street" type="xsd:string" />
+				<xsd:element name="City" type="xsd:string" />
+				<xsd:group ref="alg:AddressGrp"/>
+				<xsd:element name="Country" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:group name="AddressGrp">
+		<xsd:sequence>
+			<xsd:element name="Province" type="alg:ProvinceType"/>
+			<xsd:element name="Postal_Code" type="alg:PostalCodeType"/>
+		</xsd:sequence>
+	</xsd:group>
+
+	<xsd:simpleType name="ProvinceType">
+		<xsd:restriction base="xs:string">
+			<xs:enumeration value="AB"/>
+			<xs:enumeration value="BC"/>
+			<xs:enumeration value="MB"/>
+			<xs:enumeration value="NB"/>
+			<xs:enumeration value="NL"/>
+			<xs:enumeration value="NS"/>
+			<xs:enumeration value="ON"/>
+			<xs:enumeration value="PE"/>
+			<xs:enumeration value="QC"/>
+			<xs:enumeration value="SK"/>
+			<xs:enumeration value="NT"/>
+			<xs:enumeration value="NU"/>
+			<xs:enumeration value="YT"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xs:simpleType name ="PostalCodeType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z]\d[a-zA-Z](\s)?\d[a-zA-Z]\d"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xsd:element name="Phone">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Area_Code" type="xsd:unsignedShort" />
+				<xsd:element name="Number" type="xsd:string" />
+			</xsd:sequence>
+			<xsd:attribute name="type" type="alg:PhoneType" use="required" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xs:simpleType name="PhoneType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Home"/>
+			<xs:enumeration value="Office"/>
+			<xs:enumeration value="Mobile"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xsd:element name="Menu">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="alg:Appetizers" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="alg:Entrees" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Appetizers">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" ref="alg:Appetizer"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Entrees">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" ref="alg:Entree"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name ="Appetizer">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Name" type="xsd:string" />
+				<xsd:element ref="alg:Sides" maxOccurs ="1"/>
+				<xsd:element name="Dietary" type="xsd:string" />
+				<xsd:element name="Description" type="xsd:string" />
+				<xsd:element minOccurs="1" maxOccurs="unbounded" ref="alg:Price"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name ="Entree">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Name" type="xsd:string" />
+				<xsd:element ref="alg:Sides" maxOccurs ="1"/>
+				<xsd:element name="Dietary" type="xsd:string" />
+				<xsd:element name="Description" type="xsd:string" />
+				<xsd:element maxOccurs="unbounded" ref="alg:Price"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Sides">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0">
+				<xsd:element maxOccurs="unbounded" name="Side" type="xs:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Price">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:decimal">
+					<xsd:attribute name="quantity" type="xsd:unsignedByte" use="required" />
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="Reviews">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="alg:Review" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Review">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Gender" />
+				<xsd:element name="First_Name" type="xsd:string" />
+				<xsd:element minOccurs="0" name="Middle_Name" type="xsd:string" />
+				<xsd:element name="Last_Name" type="xsd:string" />
+				<xsd:element name="Date" type="xsd:date" />
+				<xsd:element ref="alg:Rating" maxOccurs="1" minOccurs="1"/>
+				<xsd:element ref="alg:Price_Rating" maxOccurs="1" minOccurs="1"/>
+				<xsd:element name="Summary" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name ="Rating">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:decimal">
+					<xsd:attribute name="maxRating" type="xsd:unsignedByte" use="required" />
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name ="Price_Rating">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:unsignedByte">
+					<xsd:attribute name="costRating" type="xsd:unsignedByte" use="required" />
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+</xs:schema>

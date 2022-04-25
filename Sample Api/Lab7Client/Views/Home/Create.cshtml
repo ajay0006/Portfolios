@@ -1,0 +1,123 @@
+﻿@model Lab7Client.Models.RestaurantInfo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div>
+    <h1 class="display-4" style="color:blue">Create a Restaurant Review</h1>
+</div>
+
+<div>
+    <hr class="py-1" />
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Id" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-5">
+                    <input asp-for="Id" class="form-control" type="number" value=@TempData["id"] readonly/>
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-5">
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Address.Street" class="col-sm-2 col-form-label "></label>
+                <div class='col-sm-5'>
+                    <input asp-for="Address.Street" class="form-control" />
+                    <span asp-validation-for="Address.Street" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Address.City" class="col-sm-2 col-form-label "></label>
+                <div class='col-sm-5'>
+                    <input asp-for="Address.City" class="form-control" />
+                    <span asp-validation-for="Address.City" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Address.Province" class="col-sm-2 col-form-label "></label>
+                <div class='col-sm-5'>
+                    <select asp-for="Address.Province" class="form-control" asp-items="Html.GetEnumSelectList<ProvinceType>()"></select>
+                    <span asp-validation-for="Address.Province" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Address.PostalCode" class="col-sm-2 col-form-label "></label>
+                <div class='col-sm-5'>
+                    <input asp-for="Address.PostalCode" class="form-control" />
+                    <span asp-validation-for="Address.PostalCode" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Summary" class="col-sm-2 col-form-label "></label>
+                <div class='col-sm-5'>
+                    <textarea rows="3" asp-for="Summary" class="form-control"></textarea>
+                    <span asp-validation-for="Summary" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="FoodType" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-5">
+                    <input asp-for="FoodType" class="form-control" />
+                    <span asp-validation-for="FoodType" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Cost" class="col-sm-2 col-form-label "></label>
+                <div class='col-sm-5'>
+                    <input asp-for="Cost" class="form-control" />
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label asp-for="Rating" class="col-sm-2 col-form-label "></label>
+                <div class='col-sm-5'>
+                    <input asp-for="Rating" class="form-control" />
+                    <span asp-validation-for="Rating" class="text-danger"></span>
+                </div>
+            </div>
+            <div>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+            </div>
+            <div class="form-group btn-primary btn">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}

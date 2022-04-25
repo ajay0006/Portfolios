@@ -1,0 +1,178 @@
+﻿++Solution 'Lab6Client' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:Lab6Client.sln
+++Lab6Client
+i:{00000000-0000-0000-0000-000000000000}:Lab6Client
+++Connected Services 
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1100
+++No service dependencies discovered
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1101
+++Dependencies
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1102
+++Analyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:analyzers
+++Frameworks
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:frameworks
+++Packages
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:packages
+++Properties
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\properties\
+++launchSettings.json
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\properties\launchsettings.json
+++wwwroot
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\wwwroot\
+++Connected Services
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\connected services\
+++Controllers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\controllers\
+++Models
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\models\
+++Views
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\
+++appsettings.json
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\appsettings.json
+++Program.cs
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\program.cs
+++Microsoft.AspNetCore.Analyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.3\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\microsoft.netcore.app
+++System.ServiceModel.Duplex (4.8.1)
+++System.ServiceModel.Federation (4.8.1)
+++System.ServiceModel.Http (4.8.1)
+++System.ServiceModel.NetTcp (4.8.1)
+++System.ServiceModel.Security (4.8.1)
+++css
+++js
+++lib
+++favicon.ico
+++RestaurantReviews
+++HomeController.cs
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\controllers\homecontroller.cs
+++ErrorViewModel.cs
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\models\errorviewmodel.cs
+++Home
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\home\
+++Shared
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\shared\
+++_ViewImports.cshtml
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\_viewstart.cshtml
+++appsettings.Development.json
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\appsettings.development.json
+++site.css
+++site.js
+++bootstrap
+++jquery
+++jquery-validation
+++jquery-validation-unobtrusive
+++ConnectedService.json
+++Reference.cs
+++Index.cshtml
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\home\index.cshtml
+++Privacy.cshtml
+++_Layout.cshtml
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\shared\_layout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\shared\_validationscriptspartial.cshtml
+++Error.cshtml
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\shared\error.cshtml
+++dist
+++LICENSE
+++LICENSE.txt
+++LICENSE.md
+++jquery.validate.unobtrusive.js
+++_Layout.cshtml.css
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\documents\algonquin college\internet and web applications\2022\winter\cst8259\week 9\lab\lab6client\views\shared\_layout.cshtml.css
+++jquery.js
+++additional-methods.js
+++jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+++bootstrap.css
+++bootstrap-grid.css
+++bootstrap-reboot.css
+++bootstrap-utilities.css
+++bootstrap.js
+++jquery.min.js
+++additional-methods.min.js
+++jquery.validate.min.js
+++bootstrap.css.map
+++bootstrap.min.css
+++bootstrap.rtl.css
+++bootstrap-grid.css.map
+++bootstrap-grid.min.css
+++bootstrap-grid.rtl.css
+++bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+++bootstrap-reboot.rtl.css
+++bootstrap-utilities.css.map
+++bootstrap-utilities.min.css
+++bootstrap-utilities.rtl.css
+++bootstrap.bundle.js
+++bootstrap.esm.js
+++bootstrap.js.map
+++bootstrap.min.js
+++jquery.min.map
+++bootstrap.min.css.map
+++bootstrap.rtl.css.map
+++bootstrap.rtl.min.css
+++bootstrap-grid.min.css.map
+++bootstrap-grid.rtl.css.map
+++bootstrap-grid.rtl.min.css
+++bootstrap-reboot.min.css.map
+++bootstrap-reboot.rtl.css.map
+++bootstrap-reboot.rtl.min.css
+++bootstrap-utilities.min.css.map
+++bootstrap-utilities.rtl.css.map
+++bootstrap-utilities.rtl.min.css
+++bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+++bootstrap.esm.js.map
+++bootstrap.esm.min.js
+++bootstrap.min.js.map
+++bootstrap.rtl.min.css.map
+++bootstrap-grid.rtl.min.css.map
+++bootstrap-reboot.rtl.min.css.map
+++bootstrap-utilities.rtl.min.css.map
+++bootstrap.bundle.min.js.map
+++bootstrap.esm.min.js.map
+++System.ServiceModel.Duplex (4.9.0)
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1499
+++System.ServiceModel.Federation (4.9.0)
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1495
+++System.ServiceModel.Http (4.9.0)
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1498
+++System.ServiceModel.NetTcp (4.9.0)
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1497
+++System.ServiceModel.Security (4.9.0)
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1496
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.2)
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:>1502
+++Microsoft.CodeAnalysis.Analyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++MessagePackAnalyzer
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\.nuget\packages\messagepackanalyzer\2.1.152\analyzers\dotnet\messagepackanalyzer.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{b960ae3b-65fd-4102-98e7-da5929da115f}:c:\users\sexys\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll

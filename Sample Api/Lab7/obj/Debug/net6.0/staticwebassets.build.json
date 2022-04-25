@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "a5UEERc0XR9PFrf/URkTkQs9uKW61YzEzmLUXWnUywk=",
+  "Source": "Lab7",
+  "BasePath": "_content/Lab7",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Lab7\\wwwroot",
+      "Source": "Lab7",
+      "ContentRoot": "C:\\Users\\sexys\\Documents\\algonquin college\\Internet and Web applications\\2022\\Winter\\CST8259\\Week 10\\Lab\\Lab7\\wwwroot\\",
+      "BasePath": "_content/Lab7",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\sexys\\Documents\\algonquin college\\Internet and Web applications\\2022\\Winter\\CST8259\\Week 10\\Lab\\Lab7\\wwwroot\\Data\\Practice.cs",
+      "SourceId": "Lab7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sexys\\Documents\\algonquin college\\Internet and Web applications\\2022\\Winter\\CST8259\\Week 10\\Lab\\Lab7\\wwwroot\\",
+      "BasePath": "_content/Lab7",
+      "RelativePath": "Data/Practice.cs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Data\\Practice.cs"
+    },
+    {
+      "Identity": "C:\\Users\\sexys\\Documents\\algonquin college\\Internet and Web applications\\2022\\Winter\\CST8259\\Week 10\\Lab\\Lab7\\wwwroot\\Data\\Practice.xml",
+      "SourceId": "Lab7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sexys\\Documents\\algonquin college\\Internet and Web applications\\2022\\Winter\\CST8259\\Week 10\\Lab\\Lab7\\wwwroot\\",
+      "BasePath": "_content/Lab7",
+      "RelativePath": "Data/Practice.xml",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Always",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Data\\Practice.xml"
+    },
+    {
+      "Identity": "C:\\Users\\sexys\\Documents\\algonquin college\\Internet and Web applications\\2022\\Winter\\CST8259\\Week 10\\Lab\\Lab7\\wwwroot\\Data\\Practice.xsd",
+      "SourceId": "Lab7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sexys\\Documents\\algonquin college\\Internet and Web applications\\2022\\Winter\\CST8259\\Week 10\\Lab\\Lab7\\wwwroot\\",
+      "BasePath": "_content/Lab7",
+      "RelativePath": "Data/Practice.xsd",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Data\\Practice.xsd"
+    }
+  ]
+}

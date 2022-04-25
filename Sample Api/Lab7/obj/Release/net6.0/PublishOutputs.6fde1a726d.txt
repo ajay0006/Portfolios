@@ -1,0 +1,14 @@
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Lab7.exe
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Lab7.dll
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Lab7.deps.json
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Lab7.runtimeconfig.json
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Lab7.pdb
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Azure.Core.dll
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Microsoft.Azure.Core.NewtonsoftJson.dll
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\sexys\Documents\algonquin college\Internet and Web applications\2022\Winter\CST8259\Week 10\Lab\Lab7\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll

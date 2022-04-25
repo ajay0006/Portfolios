@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>F:\Algonquin\Online Service</_PublishTargetUrl>
+    <History>True|2022-03-24T11:55:12.0017301Z;True|2022-03-24T07:53:04.0770372-04:00;True|2022-03-21T19:29:59.1171252-04:00;True|2022-03-21T19:24:18.1941630-04:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/Practice.xml">
+      <publishTime>03/24/2022 07:54:47</publishTime>
+    </File>
+    <File Include="bin/App_Data/Practice.xml">
+      <publishTime>03/24/2022 07:54:47</publishTime>
+    </File>
+    <File Include="bin/Lab6Service.dll">
+      <publishTime>03/24/2022 07:53:03</publishTime>
+    </File>
+    <File Include="bin/Lab6Service.pdb">
+      <publishTime>03/24/2022 07:53:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/System.CodeDom.dll">
+      <publishTime>10/22/2021 19:52:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 12:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 11:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 12:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/28/2018 12:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/28/2018 12:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/28/2018 12:04:24</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>03/17/2022 08:45:14</publishTime>
+    </File>
+    <File Include="RestaurantReviewService.svc">
+      <publishTime>03/14/2022 16:18:45</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/21/2022 14:20:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

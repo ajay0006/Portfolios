@@ -1,0 +1,57 @@
+1. arrow functions do not have access to this
+
+2. we can use the props to update values in the default state values, by creating a default prop and then updating that prop in the render function of the ReactDom application
+
+3. JSON.stringify & JSON.parse
+
+4. when using the Script tag in your index html, there is a precedence,
+    1. React
+    2. react-dom
+    3. utils
+    4. your React application js file
+This is done so that your app can use the dependencies, if your app js comes first, that means it won't have any dependency to load
+
+5. passing custom JSX to a component, like the addoption component etc for example, one does this when working with third party components
+
+const Layout = (props) =>
+{
+    return(
+        <div>
+            <p> Header </p>
+            {props.children}
+            <p> footer </p>
+        </div>
+    );
+
+};
+
+const template = (
+    <div>
+        <h1> Page Title </h1>
+        <p> This ios my page </p>
+    </div>
+);
+
+ReactDOM.createRoot(document.getElementById('appCounter')).render(
+    <React.StrictMode>
+        <Layout>
+            {template}
+         <Layout/>
+    </React.StrictMode>
+);
+
+//Router
+
+1. ReactDOM.createRoot(document.getElementById('exp')).render(routes); you do it this way if you are passing a simple element, and not a
+component, using the <ReactStrictMode/> would not work, if what you are passing isn't a component
+
+2. when you are using external styling or scss, to be able to have the styling reflect on a navLink is quite tricky as shown below
+
+            <NavLink to="helpExpense"
+                     className={({ isActive }) =>
+                         ["nav-link", isActive ? "active-Style" : null]
+                             .filter(Boolean)
+                             .join(" ")
+            }
+            >Help</NavLink>
+    active-Style in the case is the scss variable

@@ -1,0 +1,624 @@
+diff --git a/node_modules/react-dates/esm/components/CalendarMonth.js b/node_modules/react-dates/esm/components/CalendarMonth.js
+index c1b87ae..55d26e3 100644
+--- a/node_modules/react-dates/esm/components/CalendarMonth.js
++++ b/node_modules/react-dates/esm/components/CalendarMonth.js
+@@ -114,10 +114,10 @@ function (_ref) {
+     this.setMonthTitleHeightTimeout = setTimeout(this.setMonthTitleHeight, 0);
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+-    var month = nextProps.month,
+-        enableOutsideDays = nextProps.enableOutsideDays,
+-        firstDayOfWeek = nextProps.firstDayOfWeek;
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
++    var month = prevProps.month,
++        enableOutsideDays = prevProps.enableOutsideDays,
++        firstDayOfWeek = prevProps.firstDayOfWeek;
+     var _this$props = this.props,
+         prevMonth = _this$props.month,
+         prevEnableOutsideDays = _this$props.enableOutsideDays,
+diff --git a/node_modules/react-dates/esm/components/CalendarMonthGrid.js b/node_modules/react-dates/esm/components/CalendarMonthGrid.js
+index 7ed8339..1e6ede8 100644
+--- a/node_modules/react-dates/esm/components/CalendarMonthGrid.js
++++ b/node_modules/react-dates/esm/components/CalendarMonthGrid.js
+@@ -144,12 +144,11 @@ function (_ref) {
+     this.removeEventListener = addEventListener(this.container, 'transitionend', this.onTransitionEnd);
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var _this2 = this;
+-
+-    var initialMonth = nextProps.initialMonth,
+-        numberOfMonths = nextProps.numberOfMonths,
+-        orientation = nextProps.orientation;
++    var initialMonth = prevProps.initialMonth,
++        numberOfMonths = prevProps.numberOfMonths,
++        orientation = prevProps.orientation;
+     var months = this.state.months;
+     var _this$props = this.props,
+         prevInitialMonth = _this$props.initialMonth,
+diff --git a/node_modules/react-dates/esm/components/DateInput.js b/node_modules/react-dates/esm/components/DateInput.js
+index ecb4dcf..fb7c3d3 100644
+--- a/node_modules/react-dates/esm/components/DateInput.js
++++ b/node_modules/react-dates/esm/components/DateInput.js
+@@ -107,10 +107,10 @@ function (_ref) {
+     });
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var dateString = this.state.dateString;
+ 
+-    if (dateString && nextProps.displayValue) {
++    if (dateString && prevProps.displayValue) {
+       this.setState({
+         dateString: ''
+       });
+diff --git a/node_modules/react-dates/esm/components/DayPicker.js b/node_modules/react-dates/esm/components/DayPicker.js
+index 5c9e172..de9d7ff 100644
+--- a/node_modules/react-dates/esm/components/DayPicker.js
++++ b/node_modules/react-dates/esm/components/DayPicker.js
+@@ -258,22 +258,22 @@ function (_ref) {
+     this.setCalendarMonthWeeks(currentMonth);
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps, nextState) {
+-    var hidden = nextProps.hidden,
+-        isFocused = nextProps.isFocused,
+-        showKeyboardShortcuts = nextProps.showKeyboardShortcuts,
+-        onBlur = nextProps.onBlur,
+-        orientation = nextProps.orientation,
+-        renderMonthText = nextProps.renderMonthText,
+-        horizontalMonthPadding = nextProps.horizontalMonthPadding;
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps, prevState) {
++    var hidden = prevProps.hidden,
++        isFocused = prevProps.isFocused,
++        showKeyboardShortcuts = prevProps.showKeyboardShortcuts,
++        onBlur = prevProps.onBlur,
++        orientation = prevProps.orientation,
++        renderMonthText = prevProps.renderMonthText,
++        horizontalMonthPadding = prevProps.horizontalMonthPadding;
+     var currentMonth = this.state.currentMonth;
+-    var nextCurrentMonth = nextState.currentMonth;
++    var nextCurrentMonth = prevState.currentMonth;
+ 
+     if (!hidden) {
+       if (!this.hasSetInitialVisibleMonth) {
+         this.hasSetInitialVisibleMonth = true;
+         this.setState({
+-          currentMonth: nextProps.initialVisibleMonth()
++          currentMonth: prevProps.initialVisibleMonth()
+         });
+       }
+     }
+@@ -283,9 +283,9 @@ function (_ref) {
+         prevIsFocused = _this$props.isFocused,
+         prevRenderMonthText = _this$props.renderMonthText;
+ 
+-    if (nextProps.daySize !== daySize) {
++    if (prevProps.daySize !== daySize) {
+       this.setState({
+-        calendarMonthWidth: getCalendarMonthWidth(nextProps.daySize, horizontalMonthPadding)
++        calendarMonthWidth: getCalendarMonthWidth(prevProps.daySize, horizontalMonthPadding)
+       });
+     }
+ 
+@@ -294,7 +294,7 @@ function (_ref) {
+         var focusedDate = this.getFocusedDay(currentMonth);
+         var onKeyboardShortcutsPanelClose = this.state.onKeyboardShortcutsPanelClose;
+ 
+-        if (nextProps.showKeyboardShortcuts) {
++        if (prevProps.showKeyboardShortcuts) {
+           // the ? shortcut came from the input and we should return input there once it is close
+           onKeyboardShortcutsPanelClose = onBlur;
+         }
+diff --git a/node_modules/react-dates/esm/components/DayPickerKeyboardShortcuts.js b/node_modules/react-dates/esm/components/DayPickerKeyboardShortcuts.js
+index 9b00173..816e834 100644
+--- a/node_modules/react-dates/esm/components/DayPickerKeyboardShortcuts.js
++++ b/node_modules/react-dates/esm/components/DayPickerKeyboardShortcuts.js
+@@ -102,11 +102,11 @@ function (_ref) {
+     return _this;
+   }
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var phrases = this.props.phrases;
+ 
+-    if (nextProps.phrases !== phrases) {
+-      this.keyboardShortcuts = getKeyboardShortcuts(nextProps.phrases);
++    if (prevProps.phrases !== phrases) {
++      this.keyboardShortcuts = getKeyboardShortcuts(prevProps.phrases);
+     }
+   };
+ 
+diff --git a/node_modules/react-dates/esm/components/DayPickerRangeController.js b/node_modules/react-dates/esm/components/DayPickerRangeController.js
+index 2e39b78..7494fd1 100644
+--- a/node_modules/react-dates/esm/components/DayPickerRangeController.js
++++ b/node_modules/react-dates/esm/components/DayPickerRangeController.js
+@@ -308,21 +308,21 @@ function (_ref) {
+     return _this;
+   }
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var _this2 = this;
+ 
+-    var startDate = nextProps.startDate,
+-        endDate = nextProps.endDate,
+-        focusedInput = nextProps.focusedInput,
+-        getMinNightsForHoverDate = nextProps.getMinNightsForHoverDate,
+-        minimumNights = nextProps.minimumNights,
+-        isOutsideRange = nextProps.isOutsideRange,
+-        isDayBlocked = nextProps.isDayBlocked,
+-        isDayHighlighted = nextProps.isDayHighlighted,
+-        phrases = nextProps.phrases,
+-        initialVisibleMonth = nextProps.initialVisibleMonth,
+-        numberOfMonths = nextProps.numberOfMonths,
+-        enableOutsideDays = nextProps.enableOutsideDays;
++    var startDate = prevProps.startDate,
++        endDate = prevProps.endDate,
++        focusedInput = prevProps.focusedInput,
++        getMinNightsForHoverDate = prevProps.getMinNightsForHoverDate,
++        minimumNights = prevProps.minimumNights,
++        isOutsideRange = prevProps.isOutsideRange,
++        isDayBlocked = prevProps.isDayBlocked,
++        isDayHighlighted = prevProps.isDayHighlighted,
++        phrases = prevProps.phrases,
++        initialVisibleMonth = prevProps.initialVisibleMonth,
++        numberOfMonths = prevProps.numberOfMonths,
++        enableOutsideDays = prevProps.enableOutsideDays;
+     var _this$props = this.props,
+         prevStartDate = _this$props.startDate,
+         prevEndDate = _this$props.endDate,
+@@ -371,7 +371,7 @@ function (_ref) {
+     var didFocusChange = focusedInput !== prevFocusedInput;
+ 
+     if (numberOfMonths !== prevNumberOfMonths || enableOutsideDays !== prevEnableOutsideDays || initialVisibleMonth !== prevInitialVisibleMonth && !prevFocusedInput && didFocusChange) {
+-      var newMonthState = this.getStateForNewMonth(nextProps);
++      var newMonthState = this.getStateForNewMonth(prevProps);
+       var currentMonth = newMonthState.currentMonth;
+       visibleDays = newMonthState.visibleDays;
+       this.setState({
+diff --git a/node_modules/react-dates/esm/components/DayPickerSingleDateController.js b/node_modules/react-dates/esm/components/DayPickerSingleDateController.js
+index b6b76a3..2ea83da 100644
+--- a/node_modules/react-dates/esm/components/DayPickerSingleDateController.js
++++ b/node_modules/react-dates/esm/components/DayPickerSingleDateController.js
+@@ -219,17 +219,17 @@ function (_ref) {
+     this.isTouchDevice = isTouchDevice();
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var _this2 = this;
+ 
+-    var date = nextProps.date,
+-        focused = nextProps.focused,
+-        isOutsideRange = nextProps.isOutsideRange,
+-        isDayBlocked = nextProps.isDayBlocked,
+-        isDayHighlighted = nextProps.isDayHighlighted,
+-        initialVisibleMonth = nextProps.initialVisibleMonth,
+-        numberOfMonths = nextProps.numberOfMonths,
+-        enableOutsideDays = nextProps.enableOutsideDays;
++    var date = prevProps.date,
++        focused = prevProps.focused,
++        isOutsideRange = prevProps.isOutsideRange,
++        isDayBlocked = prevProps.isDayBlocked,
++        isDayHighlighted = prevProps.isDayHighlighted,
++        initialVisibleMonth = prevProps.initialVisibleMonth,
++        numberOfMonths = prevProps.numberOfMonths,
++        enableOutsideDays = prevProps.enableOutsideDays;
+     var _this$props = this.props,
+         prevIsOutsideRange = _this$props.isOutsideRange,
+         prevIsDayBlocked = _this$props.isDayBlocked,
+@@ -271,7 +271,7 @@ function (_ref) {
+     var recomputePropModifiers = recomputeOutsideRange || recomputeDayBlocked || recomputeDayHighlighted;
+ 
+     if (numberOfMonths !== prevNumberOfMonths || enableOutsideDays !== prevEnableOutsideDays || initialVisibleMonth !== prevInitialVisibleMonth && !prevFocused && focused) {
+-      var newMonthState = this.getStateForNewMonth(nextProps);
++      var newMonthState = this.getStateForNewMonth(prevProps);
+       var currentMonth = newMonthState.currentMonth;
+       visibleDays = newMonthState.visibleDays;
+       this.setState({
+diff --git a/node_modules/react-dates/lib/components/CalendarMonth.js b/node_modules/react-dates/lib/components/CalendarMonth.js
+index 714e83c..49a7a0e 100644
+--- a/node_modules/react-dates/lib/components/CalendarMonth.js
++++ b/node_modules/react-dates/lib/components/CalendarMonth.js
+@@ -143,10 +143,10 @@ function (_ref) {
+     this.setMonthTitleHeightTimeout = setTimeout(this.setMonthTitleHeight, 0);
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+-    var month = nextProps.month,
+-        enableOutsideDays = nextProps.enableOutsideDays,
+-        firstDayOfWeek = nextProps.firstDayOfWeek;
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
++    var month = prevProps.month,
++        enableOutsideDays = prevProps.enableOutsideDays,
++        firstDayOfWeek = prevProps.firstDayOfWeek;
+     var _this$props = this.props,
+         prevMonth = _this$props.month,
+         prevEnableOutsideDays = _this$props.enableOutsideDays,
+diff --git a/node_modules/react-dates/lib/components/CalendarMonthGrid.js b/node_modules/react-dates/lib/components/CalendarMonthGrid.js
+index 9bdc792..0f382fd 100644
+--- a/node_modules/react-dates/lib/components/CalendarMonthGrid.js
++++ b/node_modules/react-dates/lib/components/CalendarMonthGrid.js
+@@ -177,12 +177,12 @@ function (_ref) {
+     this.removeEventListener = (0, _consolidatedEvents.addEventListener)(this.container, 'transitionend', this.onTransitionEnd);
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var _this2 = this;
+ 
+-    var initialMonth = nextProps.initialMonth,
+-        numberOfMonths = nextProps.numberOfMonths,
+-        orientation = nextProps.orientation;
++    var initialMonth = prevProps.initialMonth,
++        numberOfMonths = prevProps.numberOfMonths,
++        orientation = prevProps.orientation;
+     var months = this.state.months;
+     var _this$props = this.props,
+         prevInitialMonth = _this$props.initialMonth,
+diff --git a/node_modules/react-dates/lib/components/DateInput.js b/node_modules/react-dates/lib/components/DateInput.js
+index 2723010..1a808c8 100644
+--- a/node_modules/react-dates/lib/components/DateInput.js
++++ b/node_modules/react-dates/lib/components/DateInput.js
+@@ -129,10 +129,10 @@ function (_ref) {
+     });
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var dateString = this.state.dateString;
+ 
+-    if (dateString && nextProps.displayValue) {
++    if (dateString && prevProps.displayValue) {
+       this.setState({
+         dateString: ''
+       });
+diff --git a/node_modules/react-dates/lib/components/DayPicker.js b/node_modules/react-dates/lib/components/DayPicker.js
+index ee2f635..7c12a35 100644
+--- a/node_modules/react-dates/lib/components/DayPicker.js
++++ b/node_modules/react-dates/lib/components/DayPicker.js
+@@ -300,22 +300,22 @@ function (_ref) {
+     this.setCalendarMonthWeeks(currentMonth);
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps, nextState) {
+-    var hidden = nextProps.hidden,
+-        isFocused = nextProps.isFocused,
+-        showKeyboardShortcuts = nextProps.showKeyboardShortcuts,
+-        onBlur = nextProps.onBlur,
+-        orientation = nextProps.orientation,
+-        renderMonthText = nextProps.renderMonthText,
+-        horizontalMonthPadding = nextProps.horizontalMonthPadding;
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps, prevState) {
++    var hidden = prevProps.hidden,
++        isFocused = prevProps.isFocused,
++        showKeyboardShortcuts = prevProps.showKeyboardShortcuts,
++        onBlur = prevProps.onBlur,
++        orientation = prevProps.orientation,
++        renderMonthText = prevProps.renderMonthText,
++        horizontalMonthPadding = prevProps.horizontalMonthPadding;
+     var currentMonth = this.state.currentMonth;
+-    var nextCurrentMonth = nextState.currentMonth;
++    var nextCurrentMonth = prevState.currentMonth;
+ 
+     if (!hidden) {
+       if (!this.hasSetInitialVisibleMonth) {
+         this.hasSetInitialVisibleMonth = true;
+         this.setState({
+-          currentMonth: nextProps.initialVisibleMonth()
++          currentMonth: prevProps.initialVisibleMonth()
+         });
+       }
+     }
+@@ -325,9 +325,9 @@ function (_ref) {
+         prevIsFocused = _this$props.isFocused,
+         prevRenderMonthText = _this$props.renderMonthText;
+ 
+-    if (nextProps.daySize !== daySize) {
++    if (prevProps.daySize !== daySize) {
+       this.setState({
+-        calendarMonthWidth: (0, _getCalendarMonthWidth["default"])(nextProps.daySize, horizontalMonthPadding)
++        calendarMonthWidth: (0, _getCalendarMonthWidth["default"])(prevProps.daySize, horizontalMonthPadding)
+       });
+     }
+ 
+@@ -336,7 +336,7 @@ function (_ref) {
+         var focusedDate = this.getFocusedDay(currentMonth);
+         var onKeyboardShortcutsPanelClose = this.state.onKeyboardShortcutsPanelClose;
+ 
+-        if (nextProps.showKeyboardShortcuts) {
++        if (prevProps.showKeyboardShortcuts) {
+           // the ? shortcut came from the input and we should return input there once it is close
+           onKeyboardShortcutsPanelClose = onBlur;
+         }
+diff --git a/node_modules/react-dates/lib/components/DayPickerKeyboardShortcuts.js b/node_modules/react-dates/lib/components/DayPickerKeyboardShortcuts.js
+index 786e743..838d083 100644
+--- a/node_modules/react-dates/lib/components/DayPickerKeyboardShortcuts.js
++++ b/node_modules/react-dates/lib/components/DayPickerKeyboardShortcuts.js
+@@ -125,11 +125,11 @@ function (_ref) {
+     return _this;
+   }
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var phrases = this.props.phrases;
+ 
+-    if (nextProps.phrases !== phrases) {
+-      this.keyboardShortcuts = getKeyboardShortcuts(nextProps.phrases);
++    if (prevProps.phrases !== phrases) {
++      this.keyboardShortcuts = getKeyboardShortcuts(prevProps.phrases);
+     }
+   };
+ 
+diff --git a/node_modules/react-dates/lib/components/DayPickerRangeController.js b/node_modules/react-dates/lib/components/DayPickerRangeController.js
+index c950e19..4c141ed 100644
+--- a/node_modules/react-dates/lib/components/DayPickerRangeController.js
++++ b/node_modules/react-dates/lib/components/DayPickerRangeController.js
+@@ -349,21 +349,21 @@ function (_ref) {
+     return _this;
+   }
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var _this2 = this;
+ 
+-    var startDate = nextProps.startDate,
+-        endDate = nextProps.endDate,
+-        focusedInput = nextProps.focusedInput,
+-        getMinNightsForHoverDate = nextProps.getMinNightsForHoverDate,
+-        minimumNights = nextProps.minimumNights,
+-        isOutsideRange = nextProps.isOutsideRange,
+-        isDayBlocked = nextProps.isDayBlocked,
+-        isDayHighlighted = nextProps.isDayHighlighted,
+-        phrases = nextProps.phrases,
+-        initialVisibleMonth = nextProps.initialVisibleMonth,
+-        numberOfMonths = nextProps.numberOfMonths,
+-        enableOutsideDays = nextProps.enableOutsideDays;
++    var startDate = prevProps.startDate,
++        endDate = prevProps.endDate,
++        focusedInput = prevProps.focusedInput,
++        getMinNightsForHoverDate = prevProps.getMinNightsForHoverDate,
++        minimumNights = prevProps.minimumNights,
++        isOutsideRange = prevProps.isOutsideRange,
++        isDayBlocked = prevProps.isDayBlocked,
++        isDayHighlighted = prevProps.isDayHighlighted,
++        phrases = prevProps.phrases,
++        initialVisibleMonth = prevProps.initialVisibleMonth,
++        numberOfMonths = prevProps.numberOfMonths,
++        enableOutsideDays = prevProps.enableOutsideDays;
+     var _this$props = this.props,
+         prevStartDate = _this$props.startDate,
+         prevEndDate = _this$props.endDate,
+@@ -412,7 +412,7 @@ function (_ref) {
+     var didFocusChange = focusedInput !== prevFocusedInput;
+ 
+     if (numberOfMonths !== prevNumberOfMonths || enableOutsideDays !== prevEnableOutsideDays || initialVisibleMonth !== prevInitialVisibleMonth && !prevFocusedInput && didFocusChange) {
+-      var newMonthState = this.getStateForNewMonth(nextProps);
++      var newMonthState = this.getStateForNewMonth(prevProps);
+       var currentMonth = newMonthState.currentMonth;
+       visibleDays = newMonthState.visibleDays;
+       this.setState({
+diff --git a/node_modules/react-dates/lib/components/DayPickerSingleDateController.js b/node_modules/react-dates/lib/components/DayPickerSingleDateController.js
+index 127d7bb..30a1a0f 100644
+--- a/node_modules/react-dates/lib/components/DayPickerSingleDateController.js
++++ b/node_modules/react-dates/lib/components/DayPickerSingleDateController.js
+@@ -252,17 +252,17 @@ function (_ref) {
+     this.isTouchDevice = (0, _isTouchDevice["default"])();
+   };
+ 
+-  _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
++  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+     var _this2 = this;
+ 
+-    var date = nextProps.date,
+-        focused = nextProps.focused,
+-        isOutsideRange = nextProps.isOutsideRange,
+-        isDayBlocked = nextProps.isDayBlocked,
+-        isDayHighlighted = nextProps.isDayHighlighted,
+-        initialVisibleMonth = nextProps.initialVisibleMonth,
+-        numberOfMonths = nextProps.numberOfMonths,
+-        enableOutsideDays = nextProps.enableOutsideDays;
++    var date = prevProps.date,
++        focused = prevProps.focused,
++        isOutsideRange = prevProps.isOutsideRange,
++        isDayBlocked = prevProps.isDayBlocked,
++        isDayHighlighted = prevProps.isDayHighlighted,
++        initialVisibleMonth = prevProps.initialVisibleMonth,
++        numberOfMonths = prevProps.numberOfMonths,
++        enableOutsideDays = prevProps.enableOutsideDays;
+     var _this$props = this.props,
+         prevIsOutsideRange = _this$props.isOutsideRange,
+         prevIsDayBlocked = _this$props.isDayBlocked,
+@@ -304,7 +304,7 @@ function (_ref) {
+     var recomputePropModifiers = recomputeOutsideRange || recomputeDayBlocked || recomputeDayHighlighted;
+ 
+     if (numberOfMonths !== prevNumberOfMonths || enableOutsideDays !== prevEnableOutsideDays || initialVisibleMonth !== prevInitialVisibleMonth && !prevFocused && focused) {
+-      var newMonthState = this.getStateForNewMonth(nextProps);
++      var newMonthState = this.getStateForNewMonth(prevProps);
+       var currentMonth = newMonthState.currentMonth;
+       visibleDays = newMonthState.visibleDays;
+       this.setState({
+diff --git a/node_modules/react-dates/src/components/CalendarMonth.jsx b/node_modules/react-dates/src/components/CalendarMonth.jsx
+index 226918b..b19c7cf 100644
+--- a/node_modules/react-dates/src/components/CalendarMonth.jsx
++++ b/node_modules/react-dates/src/components/CalendarMonth.jsx
+@@ -110,8 +110,8 @@ class CalendarMonth extends React.PureComponent {
+     this.setMonthTitleHeightTimeout = setTimeout(this.setMonthTitleHeight, 0);
+   }
+ 
+-  componentWillReceiveProps(nextProps) {
+-    const { month, enableOutsideDays, firstDayOfWeek } = nextProps;
++  componentDidUpdate(prevProps) {
++    const { month, enableOutsideDays, firstDayOfWeek } = prevProps;
+     const {
+       month: prevMonth,
+       enableOutsideDays: prevEnableOutsideDays,
+diff --git a/node_modules/react-dates/src/components/CalendarMonthGrid.jsx b/node_modules/react-dates/src/components/CalendarMonthGrid.jsx
+index 7ade948..6d7e33d 100644
+--- a/node_modules/react-dates/src/components/CalendarMonthGrid.jsx
++++ b/node_modules/react-dates/src/components/CalendarMonthGrid.jsx
+@@ -140,8 +140,8 @@ class CalendarMonthGrid extends React.PureComponent {
+     );
+   }
+ 
+-  componentWillReceiveProps(nextProps) {
+-    const { initialMonth, numberOfMonths, orientation } = nextProps;
++  componentDidUpdate(prevProps) {
++    const { initialMonth, numberOfMonths, orientation } = prevProps;
+     const { months } = this.state;
+ 
+     const {
+diff --git a/node_modules/react-dates/src/components/DateInput.jsx b/node_modules/react-dates/src/components/DateInput.jsx
+index 93158f3..80ede71 100644
+--- a/node_modules/react-dates/src/components/DateInput.jsx
++++ b/node_modules/react-dates/src/components/DateInput.jsx
+@@ -100,9 +100,9 @@ class DateInput extends React.PureComponent {
+     this.setState({ isTouchDevice: isTouchDevice() });
+   }
+ 
+-  componentWillReceiveProps(nextProps) {
++  componentDidUpdate(prevProps) {
+     const { dateString } = this.state;
+-    if (dateString && nextProps.displayValue) {
++    if (dateString && prevProps.displayValue) {
+       this.setState({
+         dateString: '',
+       });
+diff --git a/node_modules/react-dates/src/components/DayPicker.jsx b/node_modules/react-dates/src/components/DayPicker.jsx
+index a31a710..eb228d9 100644
+--- a/node_modules/react-dates/src/components/DayPicker.jsx
++++ b/node_modules/react-dates/src/components/DayPicker.jsx
+@@ -281,7 +281,7 @@ class DayPicker extends React.PureComponent {
+     this.setCalendarMonthWeeks(currentMonth);
+   }
+ 
+-  componentWillReceiveProps(nextProps, nextState) {
++  componentDidUpdate(prevProps, prevState) {
+     const {
+       hidden,
+       isFocused,
+@@ -290,15 +290,15 @@ class DayPicker extends React.PureComponent {
+       orientation,
+       renderMonthText,
+       horizontalMonthPadding,
+-    } = nextProps;
++    } = prevProps;
+     const { currentMonth } = this.state;
+-    const { currentMonth: nextCurrentMonth } = nextState;
++    const { currentMonth: nextCurrentMonth } = prevState;
+ 
+     if (!hidden) {
+       if (!this.hasSetInitialVisibleMonth) {
+         this.hasSetInitialVisibleMonth = true;
+         this.setState({
+-          currentMonth: nextProps.initialVisibleMonth(),
++          currentMonth: prevProps.initialVisibleMonth(),
+         });
+       }
+     }
+@@ -309,10 +309,10 @@ class DayPicker extends React.PureComponent {
+       renderMonthText: prevRenderMonthText,
+     } = this.props;
+ 
+-    if (nextProps.daySize !== daySize) {
++    if (prevProps.daySize !== daySize) {
+       this.setState({
+         calendarMonthWidth: getCalendarMonthWidth(
+-          nextProps.daySize,
++          prevProps.daySize,
+           horizontalMonthPadding,
+         ),
+       });
+@@ -323,7 +323,7 @@ class DayPicker extends React.PureComponent {
+         const focusedDate = this.getFocusedDay(currentMonth);
+ 
+         let { onKeyboardShortcutsPanelClose } = this.state;
+-        if (nextProps.showKeyboardShortcuts) {
++        if (prevProps.showKeyboardShortcuts) {
+           // the ? shortcut came from the input and we should return input there once it is close
+           onKeyboardShortcutsPanelClose = onBlur;
+         }
+diff --git a/node_modules/react-dates/src/components/DayPickerKeyboardShortcuts.jsx b/node_modules/react-dates/src/components/DayPickerKeyboardShortcuts.jsx
+index 7e9b700..12e6dec 100644
+--- a/node_modules/react-dates/src/components/DayPickerKeyboardShortcuts.jsx
++++ b/node_modules/react-dates/src/components/DayPickerKeyboardShortcuts.jsx
+@@ -91,10 +91,10 @@ class DayPickerKeyboardShortcuts extends React.PureComponent {
+     this.onKeyDown = this.onKeyDown.bind(this);
+   }
+ 
+-  componentWillReceiveProps(nextProps) {
++  componentDidUpdate(prevProps) {
+     const { phrases } = this.props;
+-    if (nextProps.phrases !== phrases) {
+-      this.keyboardShortcuts = getKeyboardShortcuts(nextProps.phrases);
++    if (prevProps.phrases !== phrases) {
++      this.keyboardShortcuts = getKeyboardShortcuts(prevProps.phrases);
+     }
+   }
+ 
+diff --git a/node_modules/react-dates/src/components/DayPickerRangeController.jsx b/node_modules/react-dates/src/components/DayPickerRangeController.jsx
+index 6ceab45..6f70168 100644
+--- a/node_modules/react-dates/src/components/DayPickerRangeController.jsx
++++ b/node_modules/react-dates/src/components/DayPickerRangeController.jsx
+@@ -270,7 +270,7 @@ export default class DayPickerRangeController extends React.PureComponent {
+     this.getFirstFocusableDay = this.getFirstFocusableDay.bind(this);
+   }
+ 
+-  componentWillReceiveProps(nextProps) {
++  componentDidUpdate(prevProps) {
+     const {
+       startDate,
+       endDate,
+@@ -284,7 +284,7 @@ export default class DayPickerRangeController extends React.PureComponent {
+       initialVisibleMonth,
+       numberOfMonths,
+       enableOutsideDays,
+-    } = nextProps;
++    } = prevProps;
+ 
+     const {
+       startDate: prevStartDate,
+@@ -339,7 +339,7 @@ export default class DayPickerRangeController extends React.PureComponent {
+         && didFocusChange
+       )
+     ) {
+-      const newMonthState = this.getStateForNewMonth(nextProps);
++      const newMonthState = this.getStateForNewMonth(prevProps);
+       const { currentMonth } = newMonthState;
+       ({ visibleDays } = newMonthState);
+       this.setState({
+diff --git a/node_modules/react-dates/src/components/DayPickerSingleDateController.jsx b/node_modules/react-dates/src/components/DayPickerSingleDateController.jsx
+index 4801328..fa18a44 100644
+--- a/node_modules/react-dates/src/components/DayPickerSingleDateController.jsx
++++ b/node_modules/react-dates/src/components/DayPickerSingleDateController.jsx
+@@ -209,7 +209,7 @@ export default class DayPickerSingleDateController extends React.PureComponent {
+     this.isTouchDevice = isTouchDevice();
+   }
+ 
+-  componentWillReceiveProps(nextProps) {
++  componentDidUpdate(prevProps) {
+     const {
+       date,
+       focused,
+@@ -219,7 +219,7 @@ export default class DayPickerSingleDateController extends React.PureComponent {
+       initialVisibleMonth,
+       numberOfMonths,
+       enableOutsideDays,
+-    } = nextProps;
++    } = prevProps;
+     const {
+       isOutsideRange: prevIsOutsideRange,
+       isDayBlocked: prevIsDayBlocked,
+@@ -264,7 +264,7 @@ export default class DayPickerSingleDateController extends React.PureComponent {
+         && focused
+       )
+     ) {
+-      const newMonthState = this.getStateForNewMonth(nextProps);
++      const newMonthState = this.getStateForNewMonth(prevProps);
+       const { currentMonth } = newMonthState;
+       ({ visibleDays } = newMonthState);
+       this.setState({

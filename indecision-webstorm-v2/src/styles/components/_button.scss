@@ -1,0 +1,43 @@
+.big-button {
+  background-color: $bigButtonColor;
+  border: none;
+  border-bottom: .6rem solid darken($bigButtonColor, 10%);
+  color: wheat;
+  font-weight: bold;
+  font-size: $medium-size;
+  margin-bottom: $small-size;
+  padding: 2.4rem;
+  width: 100%;
+}
+
+// when the button is disabled
+.big-button:disabled {
+  opacity: .5;
+}
+
+// smaller buttons
+
+.button {
+  background: $bigButtonColor;
+  border: none;
+  border-bottom: .3rem solid darken($bigButtonColor, 10%);
+  color: wheat;
+  font-weight: 500;
+  padding: $small-size;
+}
+
+.button--link {
+  background: none;
+  border: none;
+  color: wheat;
+  padding: 0;
+}
+
+// if the width is greater than 45rem in the case, apply the following changes
+@media (min-width: $desktop-breakpoint) {
+  .big-button {
+    margin-bottom: $big-size;
+    font-size: $large-size;
+  }
+
+}

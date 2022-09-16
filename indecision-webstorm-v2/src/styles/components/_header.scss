@@ -1,0 +1,27 @@
+.header {
+  background: $off-black;
+  color: wheat;
+  text-align: center;
+  margin-bottom: $small-size;
+  padding: $medium-size 0;
+}
+
+.header__title {
+  font-size: $large-size;
+  margin: 0;
+}
+
+.header__subtitle {
+  color: $off-white;
+  font-size: $medium-size;
+  font-weight: 500;
+  margin: 0;
+}
+
+// if the width is greater than 45rem in the case, apply the following changes
+@media (min-width: $desktop-breakpoint) {
+  .header {
+    margin-bottom: $big-size;
+  }
+
+}

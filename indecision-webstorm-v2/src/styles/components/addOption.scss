@@ -1,0 +1,34 @@
+.addOption-error {
+  color: wheat;
+  font-style: italic;
+  padding: 0 $small-size;
+  margin: $small-size 0 0 0;
+}
+
+.addOption-form {
+  display: flex;
+  flex-direction: column;
+  padding: $medium-size;
+
+}
+
+.addOption__input {
+  flex-grow: 1;
+  background: $widgetHeader-blue;
+  border: none;
+  border-bottom: .3rem solid darken($widgetHeader-blue, 10%);
+  margin: 0 0 $small-size 0;
+  // margin-right: $small-size;
+  color: wheat;
+  padding: $small-size;
+}
+
+// if the width is greater than 45rem in the case, apply the following changes
+@media (min-width: $desktop-breakpoint) {
+  .addOption-form {
+    flex-direction: row;
+  }
+  .addOption__input {
+    margin: 0 $small-size 0 0;
+  }
+}

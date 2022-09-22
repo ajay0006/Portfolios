@@ -1,4 +1,3 @@
-
 // these are the filter actions used
 
 const setTextFilter = (text = '') => ({
